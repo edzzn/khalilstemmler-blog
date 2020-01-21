@@ -76,13 +76,13 @@ For example, a **Postgres database** is one of several databases we could use fo
 
 The scenario seems silly when we think about how it applies to choosing a persistence technology, but choosing your web application API style (transport/client-server technology) is a similar situation. 
 
-It was only in 2019 that I realized the client-server communication API _isn't just the language we use_. It's not just REST or GraphQL. It goes a little bit deeper than that. APIs touch the edges of our front-end frameworks as data stores, and they touch the contracts of our backend services. 
+It was last year (2019) when I realized that APIs cut deeper into the stack than we think. APIs touch the edges of our front-end frameworks' _data stores_, and they touch the _contracts_ (see [Design by Contract](https://en.wikipedia.org/wiki/Design_by_contract)) of our backend services. 
 
 If this sounds a bit _virtual_, that's because it kinda is. At Apollo GraphQL, we call that _virtual layer_ the _Data Graph_. And Apollo builds tools that improves developer productivity working with it.
 
 ## The Data Graph
 
-I first heard the idea of a **Data Graph** from [Matt DeBergalis](https://twitter.com/debergalis?lang=en), CTO of [Apollo GraphQL](https://www.apollographql.com/docs/?utm_source=khalil&utm_medium=article&utm_campaign=graphql_architectural_advantages) at GraphQL Summit 2019.
+I first heard the idea of a **Data Graph** from [Matt DeBergalis](https://twitter.com/debergalis?lang=en), CTO of [Apollo GraphQL](https://www.apollographql.com/docs/?utm_source=khalil&utm_medium=article&utm_campaign=graphql_architectural_advantages), at GraphQL Summit 2019.
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/EDqw-sGVq3k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -104,9 +104,9 @@ To me, the Data Graph is a previously **missing layer** in the modern applicatio
 
 React developers typically need to patch on Redux or Context, and write lots of boilerplate code to satisfy these requirements. 
 
-Using [Apollo Client](https://www.apollographql.com/docs/react/?utm_source=khalil&utm_medium=article&utm_campaign=graphql_architectural_advantages) + React Hooks, React developers get the benefit of having _all three needs satisfied_ with a lot less code.
+When Apollo released [Apollo Client](https://www.apollographql.com/docs/react/?utm_source=khalil&utm_medium=article&utm_campaign=graphql_architectural_advantages) with [apollo-link-state](https://www.apollographql.com/docs/link/links/state/?utm_source=khalil&utm_medium=article&utm_campaign=graphql_architectural_advantages), they enabled React developers to meet _all three needs satisfied_ with a lot less code. 
 
-Personally, I most appreciate how _close_ remote state feels. 
+Apollo-link-state (now baked directly into Apollo Client 2 and 3), made it possible for developers to write queries that address both remote state and local state at the exact same time. Remote state (sitting on a server) feels much _closer_.
 
 Take this query to fetch a particular dog by its breed, for example:
 
@@ -132,13 +132,13 @@ In this query primarily intended to fetch remote resources, we can use the `@cli
 
 <p class="caption">Depiction of the the simplified data-fetching architecture where the view is any front-end framework - Source <a target="_bank" href="https://www.nerdwallet.com/blog/engineering/migrating-redux-graphql-nerdwallet-internship-experience/">nerdwallet</a>.</p>
 
-The Data Graph, with Apollo Server and Client on both ends of the connection, simplifies fetch logic, error logic, retry logic, pagination, caching, [optimistic UI](https://www.apollographql.com/docs/react/performance/optimistic-ui/?utm_source=khalil&utm_medium=article&utm_campaign=graphql_architectural_advantages), and other boilerplate data-plumbing code.
+The Data Graph, with Apollo Server and Client on both ends of the connection, simplifies fetch logic, error logic, retry logic, pagination, caching, [optimistic UI](https://www.apollographql.com/docs/react/performance/optimistic-ui/?utm_source=khalil&utm_medium=article&utm_campaign=graphql_architectural_advantages), and various other types of boilerplate data-plumbing code.
 
 <img style="width: 100%;" src="/img/blog/graphql/architectural-advantages/single-service-graph.svg"/>
 
 <p class="caption">The Data Graph stretches from client to server and has an answer for the most common infrastructural problems when fetching data and mutating state in modern web applications.</p>
 
-In order communicate with a backend service through GraphQL, [Apollo Client](https://www.apollographql.com/docs/react/?utm_source=khalil&utm_medium=article&utm_campaign=graphql_architectural_advantages) exposes several client-side methods that convert to the operation we're trying to perform into appropriate API to cross the Data Graph. 
+In order communicate with a backend service through GraphQL, [Apollo Client](https://www.apollographql.com/docs/react/?utm_source=khalil&utm_medium=article&utm_campaign=graphql_architectural_advantages) exposes several client-side methods that, when invoked, converts the operation into the appropriate API to cross the Data Graph. 
 
 On the [Apollo Server](https://www.apollographql.com/docs/apollo-server/?utm_source=khalil&utm_medium=article&utm_campaign=graphql_architectural_advantages) end, those API calls pass control off to [resolvers](https://www.apollographql.com/docs/graphql-tools/resolvers/?utm_source=khalil&utm_medium=article&utm_campaign=graphql_architectural_advantages) responsible for fetching data using ORMs, raw SQL, caches, _other RESTful APIs_ or anything else you can think of. For mutations, a resolver can simply pass control to an application layer [use case](/articles/enterprise-typescript-nodejs/application-layer-use-cases/).
 
@@ -230,6 +230,34 @@ The Apollo platform has a feature called [schema validation](https://engine.apol
 Neat!
 
 <p class="special-quote"><b>Getting started</b>: For more information on how to use Schema Validation, check out <a href="https://www.apollographql.com/docs/graph-manager/schema-validation/?utm_source=khalil&utm_medium=article&utm_campaign=graphql_architectural_advantages">the docs</a>, <a href="https://blog.apollographql.com/move-fast-without-breaking-things-c7d3407ee8d6">Evans Hauser's talk</a>, and <a href="https://engine.apollographql.com/login?utm_source=khalil&utm_medium=article&utm_campaign=graphql_architectural_advantages">sign up for a free Teams trial</a>.</p>
+
+<!-- ## GraphQL schemas are Design by Contract
+
+GraphQL schemas are strictly-typed contracts that do not care about the imperative (_how_ they get met), they only care that they are met.
+
+If a schema containing a `mutation` to `createComment`
+
+```graphql
+{
+  mutation CreateCommentMutation ($input: CreateCommentInput!){
+    createComment(input: $input) {
+
+    }
+  }
+}
+```
+
+- The schema of a GraphQL server is a strictly-typed contract that doesn't care about how it's met, it only cares that it is met. This is good for two reasons:
+  - Strictly typed contract improves stability for client-side developers utilizing the endpoint.
+  - It enables server-side developers to optimize code, change the internals as to how data is resolved, but forces the contract that they program to. 
+
+- There are elegant ways to standarize and represent responses, errors, etc.
+
+This is Barbara Liskov's "[Liskov Subsitution Principle](/articles/solid-principles/solid-typescript/#LSP)" which, put in simple terms by Uncle Bob, means that:
+
+> "To build software systems from interchangeable parts, those parts must adhere to a contract that allows those parts to be substituted one for another."
+
+If a GraphQL resolver takes in a `contentId: string` and returns either a `Post`, `Article`, or `PostNotFound`, `ArticleNotFound` type, that contract can be satisfied by a function or object that can determinately return one of those outputs for that input. -->
 
 ## Conclusion
 
