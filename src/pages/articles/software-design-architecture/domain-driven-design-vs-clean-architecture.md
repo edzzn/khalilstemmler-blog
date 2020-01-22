@@ -217,15 +217,16 @@ These are all the things our application can do.
 
 And in a previous article, we discovered that use cases were either [commands or queries](/articles/oop-design-principles/command-query-segregation/).
 
-Use Cases (a Clean Architecture term) are <u>the exact same thing</u> as **Application Services** in DDD. 
+Use Cases (a Clean Architecture term) are similar to **Application Services** in DDD. At least their _relative positioning_ is. 
 
-**Application Services** (application layer concerns, obviously) represent commands or queries (like `createComment` - COMMAND or `getCommentById` - QUERY) that:
+In DDD, **Application Services** (application layer concerns, obviously) represent commands or queries (like `createComment` - COMMAND or `getCommentById` - QUERY) that:
 
-- Contain zero business logic
-- Are only used in order to fetch domain entities from persistence and the outside world
-- Pass off flow of control to Domain Services so that they can interact based on the business rules defined in the Domain Service
+- Contain no domain-specific business logic.
+- Are used in order to fetch domain entities (and anything else) from persistence and the outside world.
+- Either passes of control to an Aggregate to execute domain logic by using a method of the Aggregate, or passes off several entities to a Domain Service to facilitate their interaction.
+- Have low-levels of [Cyclomatic Complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity).
 
-For example, the application service / use case for the `UpvotePost` command would:
+For example, the application service for the `UpvotePost` command would:
 
 1. Get the member, post, and post votes
 2. Pass them to the domain service
@@ -312,6 +313,10 @@ export class UpvotePost implements UseCase<UpvotePostDTO, Promise<UpvotePostResp
   }
 }
 ```
+
+That's Application Services.
+
+In Uncle Bob-land, Use Cases _do_ allow for business logic, but there's a differentiation between what consistutes _application layer_ business logic and what constitutes _domain business logic_. I haven't seen the Clean Coder videos myself to dive deeper on this differentiation, so maybe someone else can provide some more clarification, but it does sound quite similar to the way application and domain layer logic is organized in DDD.
 
 ---
 
