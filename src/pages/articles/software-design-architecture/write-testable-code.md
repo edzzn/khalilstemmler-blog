@@ -1,8 +1,8 @@
 ---
 templateKey: article
 title: "How I Write Testable Code | Khalil's Simple Methodology"
-date: '2020-01-19T11:11:10-40:00'
-updated: '2020-01-19T11:11:10-40:00'
+date: '2020-01-20T10:04:10-05:00'
+updated: '2020-01-120T10:04:10-05:00'
 description: >-
  The single biggest thing that improved the quality of my designs was understanding how dependencies influence my ability to write tests. In this article, I'll show you how I write testable code.
 tags:
