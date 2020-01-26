@@ -199,7 +199,7 @@ For Federated GraphQL architectures, you can compose schemas using the `@key` di
 
 ### Modeling with events when CRUD doesn't fit
 
-This is a controversial opinion, but one I feel strongly about arguing. I believe that most naturally occuring systems [don't naturally fit within the rigid confines of CRUD](/articles/enterprise-typescript-nodejs/when-crud-mvc-isnt-enough/). 
+This is a controversial opinion, but one I feel strongly about arguing. I believe that most naturally ocurring systems [don't naturally fit within the rigid confines of CRUD](/articles/enterprise-typescript-nodejs/when-crud-mvc-isnt-enough/). 
 
 > Complex systems are everywhere we look.
 
