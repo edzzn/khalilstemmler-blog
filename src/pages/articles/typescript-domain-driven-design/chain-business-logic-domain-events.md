@@ -1003,6 +1003,8 @@ const dispatchEventsCallback = (model: any, primaryKeyField: string) => {
 })();
 ```
 
+<p class="special-quote"><b>Hooks not running?</b>: To ensure your Sequelize hooks always run, use the <i>hooks: true</i> option as described in "<a href="/blogs/sequelize/hooks/">Ensuring Sequelize Hooks Always Get Run</a>".</p>
+
 ### Hooking into succesful transactions with TypeORM
 
 Using TypeORM, here's how we can utilize the entity listener decorators to accomplish the same thing.

@@ -11,6 +11,9 @@ import mysteryBanner from '../../../../images/blogs/banners/misc-banner.png';
 import graphQLIcon from '../../../../images/blogs/icons/graphql.svg';
 import graphQLBanner from '../../../../images/blogs/banners/graphql-banner.png';
 
+import sequelizeIcon from '../../../../images/blogs/icons/sequelize.png';
+import sequelizeBanner from '../../../../images/blogs/banners/sequelize-banner.png';
+
 export const BlogCategoryType = {
   'TypeScript': {
     icon: typeScriptIcon,
@@ -19,6 +22,10 @@ export const BlogCategoryType = {
   'Domain-Driven Design': {
     icon: dddIcon,
     banner: dddBanner
+  },
+  'Sequelize': {
+    icon: sequelizeIcon,
+    banner: sequelizeBanner
   },
   'GraphQL': {
     icon: graphQLIcon,
