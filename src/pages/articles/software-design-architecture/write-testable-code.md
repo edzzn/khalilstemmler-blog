@@ -11,7 +11,7 @@ tags:
  - Dependency Inversion
  - Professionalism
 category: Software Design
-image: /img/blog/software-architecture-design/testable-code/how-i-write-testable-code.png
+image: /img/blog/software-architecture-design/testable-code/testable-code.png
 published: true
 ---
 
