@@ -165,6 +165,8 @@ Have you read any of these books? What did you think? Any books not on this list
 
 Here’s a list of some really excellent articles that cover some of the topics from these books. If you don’t quite have the time to invest in fully blown books right now, familiarizing yourself with these concepts might assist you in your journey to become a better developer!
 
+### Architecture & software design
+
 Refactoring.guru
 https://refactoring.guru/
 
@@ -182,3 +184,7 @@ https://fullstackmark.com/post/11/better-software-design-with-clean-architecture
 
 The Clean Architecture
 http://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
+
+### Web Development
+
+<a href="https://amazon.com/dp/1983065633" title="css book">CSS Visual Dictionary</a>
