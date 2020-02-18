@@ -71,3 +71,6 @@ I found this page, [Introduction to Programming Languages/Grammars](https://en.w
 
 There's also [Babel](https://babeljs.io/), a modern JavaScript compiler that you might have used. I suspect peeking at the source code here would be insightful :)
 
+Other stuff:
+- [Free] https://www.craftinginterpreters.com/the-lox-language.html
+- [Paid, but the content is really good apparently!] https://coded-classes.dpdcart.com/product/81271
