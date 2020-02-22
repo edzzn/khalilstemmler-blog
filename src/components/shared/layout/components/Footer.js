@@ -14,7 +14,7 @@ const MenuList = props => {
       {props.items.map((item, index) => {
         if (item.email) {
           return (
-            <a key={index} href="mailto:khalilstemmler@gmail.com">
+            <a key={index} href="mailto:khalil@khalilstemmler.com">
               {item.name}
             </a>
           )
@@ -54,7 +54,7 @@ const Menu = () => {
         items={[
           {
             name: 'Email',
-            url: 'khalilstemmler@gmail.com',
+            url: 'khalil@khalilstemmler.com',
             email: true,
           },
           {

@@ -4,29 +4,34 @@
   min-width: 100px;
   display: flex;
   justify-items: center;
-  padding: 1.5rem 1rem 1.5rem 1rem;
-  border-bottom: solid 1px black;
   align-items: center;
-  background-color: white;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
   position: fixed;
   width: 100%;
-  background: white;
+  background: black;
   z-index: 10;
+  color: white;
+  flex-direction: column;
 
   &.scroll 
-    padding: 0.6rem 0rem 0.6rem 0rem;
+    > .navigation-inner
+      transition: 0.2s all;
+      padding: 0.85rem 1rem 0.85rem 1rem
 
-  @media (max-width: $mobile-breakpoint)
-    padding: 0.6rem 0rem 0.6rem 0rem;
+  .retro-bars
+    width: 100%;
+
+    > div 
+      height: 0.4rem;
 
   .navigation-inner
     margin: 0 auto;
-    width: 1200px;
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    width: 100%;
 
     a 
       font-weight: 500;

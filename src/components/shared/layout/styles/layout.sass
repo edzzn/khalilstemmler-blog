@@ -1,11 +1,9 @@
 
 @import '../../../../assets/styles/variables.sass'
 
-@font-face 
-  font-family: 'Compacta';
-  src: url('../../../../assets/fonts/compacta/CompactaBT-Roman.eot');
-  src: url('../../../../assets/fonts/compacta/CompactaBT-Roman.woff') format('woff');
-  src: url('../../../../assets/fonts/compacta/CompactaBT.ttf') format('truetype');
+@font-face
+  font-family: 'TriplettCGBlack';
+  src: url('../../../../assets/fonts/triplettcgblack/TriplettCGBlack.otf');
 
 .special-green
   background: $accent-color;
@@ -15,7 +13,9 @@
 .intro-text
   font-size: 2.2rem;
   margin-top: 1rem;
-  line-height: 3.5rem;
+  line-height: 2.4rem;
+  font-family: 'TriplettCGBlack';
+  color: black;
   
   @media(max-width: $mobile-breakpoint)
     font-size: 1.5rem;
@@ -23,8 +23,9 @@
     line-height: 2.1rem;
 
 .subhero-text
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   display: block;
+  line-height: 1.5rem;
 
   a 
     text-decoration: none;
@@ -37,7 +38,7 @@
   margin: 0 auto;
   max-width: 1200px;
   padding: 0px 1.0875rem 1.45rem;
-  padding-top: 7.5rem;
+  padding-top: 9rem;
   overflow: hidden;
 
 .main 
@@ -50,7 +51,7 @@ a
 p,
 ul,
 li
-  letter-spacing: 0.4px;
+  letter-spacing: 0px;
 
 ul,
 li 
@@ -59,7 +60,7 @@ li
   font-size: 1.16rem
 
 body 
-  font-family: 'Roboto'
+  font-family: 'Helvetica'
   transition: background 0.2s ease, color 0.2s ease;
   border-left: solid 3px black
   

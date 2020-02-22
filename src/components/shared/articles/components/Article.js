@@ -3,7 +3,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import "../styles/Article.sass"
 import HTMLContent from '../../../shared/HTMLContent'
-import { ArticleMeta } from '../../date-posted'
 import { kebabCase } from 'lodash'
 import { Link } from 'gatsby'
 import AboutTheAuthor from './AboutTheAuthor'
@@ -17,7 +16,6 @@ import ArticleCategory from './ArticleCategory'
 import { ShareButtons } from '../../share-buttons';
 import ArticleAnchors from './ArticleAnchors';
 import { getCategoryIconAndBanner } from '../../../../utils/blog';
-import { HorizonalAd } from '../../ads';
 import { Comments } from '../../../comments';
 
 class Article extends React.Component {
@@ -117,20 +115,12 @@ class Article extends React.Component {
         <h1 className="article-title">{title}</h1>
         <ArticleAnchors message={anchormessage} anchors={anchors}/>
         <ArticleCategory category={category}/>
-        <ArticleMeta 
-          date={date} 
-          readingTime={readingTime}
-          editAndShare={true}
-          title={title}
-          url={fullUrl}
-          slug={slug}
-        />
-        <Tags 
-          tags={tags}/>
         <ArticleDescription 
           description={description}/>
-        <AuthorCredit 
-          author={Authors.khalil}/>
+        <Tags 
+          tags={tags}/>
+        {/* <AuthorCredit 
+          author={Authors.khalil}/> */}
         
         <br/>
         <img src={image}/>

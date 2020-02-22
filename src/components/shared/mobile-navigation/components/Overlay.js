@@ -46,7 +46,7 @@ const Overlay = props => {
         toggleBurgerMenu={props.toggleBurgerMenu}
       />
       <OverlayLink
-        path={"mailto:khalilstemmler@gmail.com"}
+        path={"mailto:khalil@khalilstemmler.com"}
         displayName="/contact"
         ext={true}
         toggleBurgerMenu={props.toggleBurgerMenu}

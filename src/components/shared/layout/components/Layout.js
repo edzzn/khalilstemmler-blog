@@ -89,7 +89,6 @@ class Layout extends React.Component {
            
           <Navigation rawMode={this.isRawModeEnabled()}/>
            
-          
           <div className="main-container">
             <main 
               className="main"
