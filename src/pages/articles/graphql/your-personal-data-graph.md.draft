@@ -1,0 +1,22 @@
+---
+templateKey: article
+title: Building your own Personal Data Graph
+date: '2020-02-23T00:05:26-04:00'
+description: >-
+  I've always wanted to add the ability to display the currentl song that I'm listening to on my website. After 3 or 4 attempts, I've finally figured out how to get it to work!
+tags:
+  - Spotify
+  - Tutorial
+  - Music
+category: GraphQL
+image: /img/blog/personal-data-graph/banner.png
+published: true
+---
+
+## Your own APIs that you use
+
+Let's say that there's a bunch of services or APIs that you use often. Trevor blades made this service (countries)
+
+## Your private APIs
+
+Let's say that you have a bunch of APIs that you use to build stuff

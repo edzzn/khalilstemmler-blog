@@ -26,7 +26,7 @@ YAGNI is meant to be combined with **continuous refactoring**, automated unit te
 
 Failure to refactor code early could require huge amounts of **technical dept** and **rework**.
 
-Thereforer, in order to do YAGNI well, developers first need to know how to:
+Therefore, in order to do YAGNI well, developers first need to know how to:
 
 - write code that's testable
 - run automated tests
