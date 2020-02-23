@@ -14,13 +14,13 @@ export default {
   "main": {
     "description": (
       <span>
-        Advanced <span className="special-green">TypeScript</span> & <span className="special-green">Node.js</span> best practices for <span className="special-green">large-scale</span> applications. Learn to write <span className="special-green">flexible</span>, <span className="special-green">maintainable</span> software.
+        I'm Khalil. I teach advanced <span className="special-green">TypeScript</span> & <span className="special-green">Node.js</span> best practices for <span className="special-green">large-scale</span> applications. Learn to write <span className="special-green">flexible</span>, <span className="special-green">maintainable</span> software.
       </span>
     ),
     "description-expanded": (
       <span className="subhero-text">
         I create <Link to="/courses">courses</Link>, <Link to="/books">books</Link>, 
-        and <Link to="/articles">articles</Link> for aspiring developers on <Link to="/articles/categories/enterprise-node-type-script/">Enterprise Node.js</Link>, <Link to="/articles/categories/domain-driven-design/">Domain-Driven Design</Link> and <Link to="/articles/solid-principles/solid-typescript/">writing testable, flexible JavaScript</Link>.
+        and <Link to="/articles">articles</Link> for aspiring developers on <Link to="/articles/categories/enterprise-node-type-script/">Enterprise Node.js</Link>, <Link to="/articles/categories/domain-driven-design/">Domain-Driven Design</Link>, <Link to="/articles/categories/graph-ql/">GraphQL</Link>, and <Link to="/articles/solid-principles/solid-typescript/">writing testable, flexible JavaScript</Link>.
       </span>
     )
   },

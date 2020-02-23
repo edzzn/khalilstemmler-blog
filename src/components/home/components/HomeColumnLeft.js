@@ -3,6 +3,7 @@ import React from 'react'
 import SocialLinks from './SocialLinks'
 import Currently from './Currently'
 import me from '../../../images/khalil-2.jpeg'
+import cowboy from '../../../images/cowboy.jpg'
 import { SolidBookResourceCard } from '../../resources'
 import "../styles/Home.sass"
 
@@ -11,9 +12,6 @@ class HomeComponentLeft extends React.Component {
     return (
       <div className="home-column-left">
         <div className="intro">
-          <div className="intro-card">
-            <h1 className="intro-card--name">KHALIL STEMMLER</h1>
-          </div>
           <div className="intro-picture-container">
             <img src={me}/>
           </div>
@@ -23,7 +21,7 @@ class HomeComponentLeft extends React.Component {
           github={{ showDataCount: false }}
           twitter={{ showDataCount: false }}
         />
-        <Currently/>
+        {/* <Currently/> */}
         <br/>
         <SolidBookResourceCard/>
       </div>

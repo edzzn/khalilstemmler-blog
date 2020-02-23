@@ -11,16 +11,6 @@ const ArticlesNavigation = ({ categories, tags }) => (
     <div className="desktop-subscribe-form-container">
       <SmallSubscribeForm/>
     </div>
-    {/* <div className="categories--parent-category">Categories</div>
-    <Link to="/articles">All</Link>
-    {categories.map((category, i) => (
-      <Link 
-        activeClassName="active" 
-        to={`/articles/categories/${kebabCase(category)}/`} 
-        key={i}>{category}
-      </Link>
-    ))} */}
-
     <br/>
     <div className="categories--parent-category">Tags</div>
     <div className="categories--tags-container">

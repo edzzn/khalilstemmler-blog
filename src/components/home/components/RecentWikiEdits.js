@@ -8,7 +8,7 @@ import arrowForward from '../../../images/icons/arrow-forward.svg'
 
 const RecentWikiEdits = ({ wikis }) => (
   <WikiContainer
-    titleText="recently edited wikis"
+    titleText="Recently Edited Wikis"
     subTitleComponent={(
       <Link className="navigation-link" to="/wiki">view all <img src={arrowForward}/></Link>
     )}

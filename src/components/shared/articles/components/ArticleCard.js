@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import { ArticleMeta } from '../../date-posted'
 import AuthorCredit from './AuthorCredit'
-import "../styles/ArticleCard.sass"
 import { makeElipsedText } from '../../../../utils/blog'
 import Authors from '../constants/AuthorConstants'
 import { Tags } from '../../tags'
 import ArticleCategory from './ArticleCategory'
+
+import "../styles/ArticleCard.sass"
 
 export const GhostArticleCard = () => (
   <div style={{ height: '0px', minHeight: '0px'}} className="article-card"></div>
@@ -33,13 +33,9 @@ const ArticleCard = (props) => {
       <div className="article-card--content">
         <Link to={slug} className="article-card--title">{title}</Link>
         <ArticleCategory category={category}/>
-        <ArticleMeta 
-          date={date} 
-          readingTime={readingTime}
-        />
         <Tags tags={tags}/>
         <div className="article-card--description">{makeElipsedText(description, 130)}</div>
-        <AuthorCredit author={Authors.khalil}/>
+        {/* <AuthorCredit author={Authors.khalil}/> */}
       </div>
     </div>
   )

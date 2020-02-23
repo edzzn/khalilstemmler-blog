@@ -74,9 +74,9 @@ class SmallSubscribeForm extends React.Component {
     return (
       <div className="small-subscribe-form">
         <div className="header">
-            <div className="icon-container">
+            {/* <div className="icon-container">
               <img src={mysteryIcon}/>
-            </div>
+            </div> */}
             <div className="details">
               <p className="message">
                 { message }

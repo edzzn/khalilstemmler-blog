@@ -8,7 +8,7 @@ import { ArticlesContainer } from '../../shared/articles'
 
 const RecentArticles = ({ articles }) => (
   <ArticlesContainer
-    titleText="recent articles"
+    titleText="Recent Articles"
     subTitleComponent={(
       <Link 
         className="navigation-link" 
