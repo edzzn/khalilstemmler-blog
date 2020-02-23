@@ -14,7 +14,7 @@ export default {
   "main": {
     "description": (
       <span>
-        Hey! I'm Khalil. I teach advanced <span className="special-green">TypeScript</span> & <span className="special-green">Node.js</span> best practices for <span className="special-green">large-scale</span> applications. Learn to write <span className="special-green">flexible</span>, <span className="special-green">maintainable</span> software.
+        I'm Khalil. I teach advanced <span className="special-green">TypeScript</span> & <span className="special-green">Node.js</span> best practices for <span className="special-green">large-scale</span> applications. Learn to write <span className="special-green">flexible</span>, <span className="special-green">maintainable</span> software.
       </span>
     ),
     "description-expanded": (

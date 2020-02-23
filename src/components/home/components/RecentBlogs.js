@@ -7,7 +7,7 @@ import { BlogsContainer } from '../../shared/blogs'
 
 const RecentBlogs = ({ blogs }) => (
   <BlogsContainer
-    titleText="recent blogs"
+    titleText="Recent Blogs"
     subTitleComponent={(
       <Link className="navigation-link" to="/blog">view all <img src={arrowForward}/></Link>
     )}
