@@ -36,7 +36,7 @@ You're going to need to be using Node version 10x or higher for this to work. Th
 
 Clone or fork my repo over at https://github.com/stemmlerjs/stemmlerjs-graph to follow along.
 
-Run the following commands to clone, install, and setup the project.
+Run the following commands to clone, install, and set up the project.
 
 ```bash
 git clone git@github.com:stemmlerjs/stemmlerjs-graph.git
@@ -49,7 +49,7 @@ mv .env.template .env
 
 Go to the [Spotify Developers Dashboard](https://developer.spotify.com/dashboard/login) and sign up for an account.
 
-When you're all signed up, you'll be taken to the Spotify Developers Dashboard that shows your applications. Click "Create An App".
+When you're all signed up, you'll get to the Spotify Developers Dashboard that shows your applications. Click "Create An App".
 
 !["Spotify Dashboard"](/img/blog/tutorials/spotify/1-dashboard.png)
 
@@ -63,7 +63,7 @@ Follow the prompts and select _Non-Commercial_ for the type of integration that 
 
 ## Getting your Client ID and Client Secret
 
-When you login, you should be able to see your Client ID. Underneath it, you can click to see your Client Secret.
+When you log in, you should be able to see your Client ID. Underneath it, you can click to see your Client Secret.
 
 !["Access Code and Secret Access Code"](/img/blog/tutorials/spotify/4-client-id-secret.png)
 
@@ -80,13 +80,13 @@ SPOTIFY_CLIENT_SECRET= # paste here as well :-)
 
 Now we need to configure the application with the **website** and **redirect URI**.
 
-On the dashboard page, click "Edit Settings" and a modal should appear.
+On the dashboard page, click "Edit Settings", and a modal should appear.
 
 !["Finishing registration"](/img/blog/tutorials/spotify/5-configure-app.png)
 
 ### Configuring the Website
 
-For `website`, you don't actually need to have a website up and running yet, so just put in the name of a website that you own. 
+For `website`, you don't need to have a website up and running yet, so just put in the name of a website that you own. 
 
 If you don't own a website, you can use `google.com`.
 
@@ -96,7 +96,7 @@ This is where Spotify sends us after we've logged in. They send us to the URL th
 
 If you have a website, you can put _any URL from your domain_ here, and Spotify will redirect us there after logging in.
 
-If you _don't have a website_, again- that's OK, we can use `http://google.com/callback` or something, but do understand that the domain that owns the website that we redirect to is fully capable of reading the **authorization code** we're given back.
+If you _don't have a website_, again- that's OK, we can use `http://google.com/callback` or something, but do understand that the domain that owns the website that we redirect to is fully capable of reading the **authorization code** we receive.
 
 <p class="special-quote">When you enter your Redirect URI, don't forget to press the "Add" button beside the URL, and THEN click "Save". That's how attempt #1 of hooking this up failed for me - though you're much smarter so that won't happen to you.</p>
 
@@ -111,7 +111,7 @@ SPOTIFY_REDIRECT_URL=https://khalilstemmler.com/callback # For example
 
 ## Getting the initial Authorization Code
 
-Take this URL and substitute your Client ID and Redirect URI where I've placed `PASTE_HERE`, then paste the entire link into your browser. 
+Take this URL and substitute your Client ID and Redirect URI, where I've placed `PASTE_HERE`, then paste the entire link into your browser. 
 
 ```text
 https://accounts.spotify.com/authorize?client_id=PASTE_HERE&
@@ -166,7 +166,7 @@ In [the repo](https://github.com/stemmlerjs/stemmlerjs-graph), I've already gone
 
 The action happens in [spotifyService.ts](https://github.com/stemmlerjs/stemmlerjs-graph/blob/master/src/modules/spotify/services/spotifyService.ts) which you can peruse if you like. 
 
-If you'd like to play around with the graph via GraphQL playground, simply run:
+If you'd like to play around with the graph via GraphQL playground, run:
 
 ```bash
 npm run start
