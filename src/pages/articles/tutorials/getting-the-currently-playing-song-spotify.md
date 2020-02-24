@@ -15,17 +15,18 @@ published: true
 
 ## Intro
 
-When I first started builing [khalilstemmler.com](https://khalilstemmler.com), I stubbed out a component to present the current song that I was listening to on Spotify. Y'know, I just wanted to add a cool little feature in order to make the site a little bit more unique.
 
-Fast forward 8 months and it's still not hooked up. After about 4 attempts, I've finally gotten the hard part down (integrating with the API). At some point, I might actually code the React component.
+When I first started building [khalilstemmler.com](https://khalilstemmler.com), I stubbed out a component to present the current song that I was listening to on Spotify. Y'know, I just wanted to add a neat little feature to make the site a little bit more unique.
 
-This fun Spotify feature, in addition to several others that I'm thinking about adding for my website and other projects, are part of my [Personal Data Graph](https://github.com/stemmlerjs/stemmlerjs-graph). 
+Fast forward eight months, and it's still not hooked up. After about four attempts, I've finally gotten the hard part down (integrating with the API). At some point, I might code the React component.
 
-The reason I need a Personal Data Graph for this feature is because in order to fetch authenticated user resources from Spotify, the service that asks for the data needs to be, well- authenticated... as _me_.
+This fun Spotify feature is part of my [Personal Data Graph](https://github.com/stemmlerjs/stemmlerjs-graph). 
 
-The docs from [Spotify's Authorization Guide](https://developer.spotify.com/documentation/general/guides/authorization-guide/) told me that I needed to use the [Authorization Code](https://developer.spotify.com/documentation/general/guides/authorization-guide/#authorization-code-flow) approach, one of 3, in order to make this work.
+The reason I need a Personal Data Graph for this feature is, to fetch authenticated user resources from Spotify, the service that asks for the data needs to be, well- authenticated... as _me_.
 
-I'm going to plough through this process and show you, very imperatively, the steps involved to authenticate a backend service to act on your behalf to fetch your currently playing song from Spotify.
+The docs from [Spotify's Authorization Guide](https://developer.spotify.com/documentation/general/guides/authorization-guide/) told me that I needed to use the [Authorization Code](https://developer.spotify.com/documentation/general/guides/authorization-guide/#authorization-code-flow) approach, one of 3, to make this work.
+
+I'm going to plow through this process and show you, very imperatively, the steps involved to authenticate a backend service to act on your behalf to fetch your currently playing song from Spotify.
 
 ## Prerequisites
 
