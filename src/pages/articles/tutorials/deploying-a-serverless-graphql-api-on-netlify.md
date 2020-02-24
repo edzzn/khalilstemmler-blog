@@ -15,11 +15,11 @@ image: /img/blog/tutorials/serverless-graphql/serverless-graphql.png
 published: true
 ---
 
-You know, I'm actually very proud to be a developer in 2020. The access we have to tools and services is amazing. The barrier to entry towards crafting side-projects, startups, businesses, etc- it's almost non-existant.
+You know, I'm very proud to be a developer in 2020. The access we have to tools and services is impressive. The barrier to entry towards crafting side-projects, startups, businesses, etc.- it's almost non-existent.
 
 With tools like [Netlify](https://www.netlify.com/), we can deploy a _serverless_ Apollo GraphQL server for free in seconds. Un. Real.
 
-While I like being able to do things quickly, I'm also one who believes that "if we do it, we know it". So I'm going to give you a few useful resources on how to deploy serverless GraphQL APIs and then walk you though the process so that you can better appreciate what's going on. 
+While I like being able to do things quickly, I'm also one who believes that "if we do it, we know it". So I'm going to give you a few useful resources on how to deploy serverless GraphQL APIs and then walk you through the process so that you can better appreciate what's going on. 
 
 <p class="special-quote">Huge shoutout to the great <a href="https://twitter.com/trevorblades">Trevor Blades</a> who cut 80% of the time it would have taken me to figure this stuff out on my own. Most of this is based off of his <a href="https://github.com/trevorblades/countries">Countries GraphQL API</a>.</p>
 
@@ -68,7 +68,7 @@ npm install --save apollo-server apollo-server-lambda
 npm install --save-dev cpx nodemon
 ```
 
-- `apollo-server`: When we're developing locally, we're going to want to run our code against a local GraphQL endpoint. Let's install this so that we can craft a good local development experience.
+- `apollo-server`: When we're developing locally, we're going to want to run our code against a local GraphQL endpoint. Let's install this so that we can craft an excellent local development experience.
 - `apollo-server-lambda`: This is a version of Apollo Server optimized to work on serverless lambda functions. It's what we use to deploy to production.
 - `cpx`: In Netlify, we need to bundle all of our source code in the `functions/` folder, so we need a way to copy the code from our `src/` folder in a cross-platform-friendly way to the `functions/` folder.
 - `nodemon`: We all like cold-reloading. Install this so that we can get live updates when we change any files.
@@ -109,7 +109,7 @@ const resolvers = {
 };
 ```
 
-Last thing in this file- let's create two **factory functions**: one for the lambda server, and one for the regular server. We'll also export these from the module as an object.
+The last thing in this file- let's create two **factory functions**: one for the lambda server, and one for the regular server. We'll also export these from the module as an object.
 
 <div class="filename">server.js</div>
 
@@ -204,7 +204,7 @@ Now that we've got the local server running, it's time to hook up the one that w
 
 ### Create the functions directory
 
-In the root of the project, create a directory called `functions/`. This is where we'll tell Netlify to look for our functions.
+At the root of the project, create a directory called `functions/`-  this is where we'll tell Netlify to look for our functions.
 
 ```bash
 touch functions
@@ -284,7 +284,7 @@ exports.handler = server.createHandler({
 });
 ```
 
-We're pretty much all set to go! Last thing to do is configure Netlify.
+We're pretty much all set to go! The last thing to do is configure Netlify.
 
 ## Netlify configuration
 
@@ -300,7 +300,7 @@ touch index.html
 
 ### Redirects file
 
-By default, our endpoint lives at https://OUR_SITE_NAME/.netlify/functions/graphql. We don't want to have to refer to it like that, we'd prefer to just refer to the site like https://OUR_SITE_NAME/. 
+By default, our endpoint lives at https://OUR_SITE_NAME/.netlify/functions/graphql. We don't want to have to refer to it like that; we'd prefer to just see to the site like https://OUR_SITE_NAME/. 
 
 To remedy this, create a `_redirects` file at the root of the project.
 
@@ -322,7 +322,7 @@ Then add the following config.
 
 The last thing we need to do is tell Netlify what the **build** command is and where our **functions** live.
 
-This can be done with a `netlify.toml` file.
+We can do set this up with a `netlify.toml` file.
 
 Let's create one at the root of the project.
 
@@ -330,7 +330,7 @@ Let's create one at the root of the project.
 touch netlify.toml
 ```
 
-And since we want to always bundle our code before we deploy, let's use `npm run bundle` as the build command.
+And since we need to bundle our code before we deploy, let's use `npm run bundle` as the build command.
 
 <div class="filename">netlify.toml</div>
 
@@ -344,11 +344,11 @@ That's it!
 
 ## Deploying to Netlify
 
-Two really easy ways to deploy this are:
+Two effortless ways to deploy this are:
 
 1. Click the "Deploy to Netlify" button in either starter. It will clone the repos to your GitHub account and deploy them.
 
-2. Manually clone the repos, log into Netlify, and then select a repository to deploy.
+2. Manually clone the repos, log in to Netlify, and then select a repository to deploy.
 
 
 
