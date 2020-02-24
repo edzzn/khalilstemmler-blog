@@ -48,9 +48,48 @@ type Query {
 }
 ```
 
-It's too bad that this doesn't work. It's not that it isn't valid GraphQL, but it's just that if we were to do this, **none of our nested resolvers will ever get invoked**. See [here](https://github.com/graphql/graphql-js/issues/221#issuecomment-568894704) and [here](https://github.com/apollographql/apollo-server/issues/3635).
+Looking at the structure of the root `Query` type, you'd assume that the resolvers object would assume the same shape of the `Query` type, like so.
 
-This isn't great, as we'd like to be able to enforce some sort of namespacing. Some separation of concerns. 
+<div class="filename">resolvers.ts</div>
+
+```typescript
+const resolvers = {
+  Query: {
+    spotify: {
+      // Will not get invoked.
+      spotifyGetCurrentSongPlaying: async () => {
+        const currentSongResult = await getCurrentSong.execute();
+        return currentSongResult.isRight() ? currentSongResult.value : null
+      }
+    }
+  }
+}
+```
+
+Unfortunately, this won't work. It's not that it isn't valid GraphQL, but it's just that if we were to do this, **none of our nested resolvers will ever get invoked**. 
+
+With `ApolloServer`, if we want to refer to a type nested deeper than one level, that type needs to be defined as its own attribute on the resolvers object like the following.
+
+<div class="filename">resolvers.ts</div>
+
+```typescript
+const resolvers = {
+  Query: {
+    spotify: () => ({}) // Return nothing
+  },
+
+  Spotify: {
+    spotifyGetCurrentSongPlaying: async () => {
+      const currentSongResult = await getCurrentSong.execute();
+      return currentSongResult.isRight() ? currentSongResult.value : null
+    }
+  }
+}
+```
+
+This works! 
+
+Although on a larger application, we'd like to be able to enforce some sort of namespacing. Some separation of concerns. 
 
 Take the following example of a GraphQL schema with the `users` and `movies` subdomains. Without namespacing, we end up with large schemas that look like the following.
 
@@ -86,7 +125,6 @@ type Mutation {
 <p class="caption">A poorly namespaced GraphQL schema.</p>
 
 You may be able to see that the grouping and cohesion between related operations are not present here. It's visually challenging to group all  operations related to `users`, `actors`, and `movies` into units. Everything is mixed together.
-
 
 In [Domain-Driven Design](/articles/domain-driven-design-intro/), each subdomain contains only the operations that are related to that subdomain. Subdomains are well encapsulated.
 
@@ -139,11 +177,15 @@ There's still references between subdomains, and that's ok, because in software,
 
 That said, it's a good idea to be explicit about those relationships- this is where tools like [Apollo Federation](https://www.apollographql.com/docs/apollo-server/federation/introduction/?utm_source=khalil&utm_medium=article&utm_campaign=nested_resolvers) come in handy because we can compose schemas and be precise about where fields are resolved from between services. 
 
+### Mutations
+
+Unfortunately, the story of nested resolvers for **mutations** is a lot shorter. See [here](https://github.com/graphql/graphql-js/issues/221#issuecomment-568894704) and [here](https://github.com/apollographql/apollo-server/issues/3635).
+
 ## Solutions
 
 Let's look at two approaches to remedy our design issue.
 
-### 1. Enforcing a GraphQL-operation naming pattern
+### 1. Enforcing a GraphQL-operation naming pattern for both queries and mutations
 
 Best for _modular monolith_ applications where several subdomains are housed from within the same project (or in fancy DDD-talk, the same bounded context). 
 
@@ -240,7 +282,6 @@ extend type Product @key(fields: "upc") {
 ```
 
 Clone and try out the [Apollo Federation Demo](https://github.com/apollographql/federation-demo) if you're interested in this approach. To learn more about how it works and how to get started, check out [the docs](https://www.apollographql.com/docs/apollo-server/federation/introduction/?utm_source=khalil&utm_medium=article&utm_campaign=nested_resolvers).
-
 
 ## Conclusion
 
