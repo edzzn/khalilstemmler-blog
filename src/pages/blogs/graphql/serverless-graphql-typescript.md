@@ -17,7 +17,7 @@ displayInArticles: false
 
 Deploying a Serverless GraphQL API with TypeScript is essentially the same as deploying one with JavaScript.
 
-The only difference is the slight diffrence in build steps.
+The only difference is in the build steps.
 
 For example, using vanilla JavaScript on Netlify, the build step in our `package.json` is usually to **copy all of the vanilla JavaScript code in our `src` folder** over to the `functions` folder.
 
