@@ -34,7 +34,7 @@ While I like being able to do things quickly, I'm also one who believes that "if
 By the **start** of this article (like- right now), you should be aware of two resources to deploy GraphQL APIs on Netlify. Check them out below.
 
 - [Serverless GraphQL on Netlify API Starter Project](https://github.com/stemmlerjs/serverless-graphql-netlify-starter)
-- [Serverless GraphQL on Netlify API using TypeScript Starter Project](https://github.com/stemmlerjs/serverless-graphql-netlify-starter)
+- [Serverless GraphQL on Netlify API using TypeScript Starter Project](https://github.com/stemmlerjs/serverless-typescript-graphql-netlify-starter)
 
 If you just need to get something up and running, you can go to either of those projects, click "Deploy to Netlify", and you're good to go. You can even stop reading right here.
 
