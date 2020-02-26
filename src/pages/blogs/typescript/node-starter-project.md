@@ -306,4 +306,7 @@ Builds the app at `build`, cleaning the folder first.
 
 Starts the app in production by first building the project with `npm run build`, and then executing the compiled JavaScript at `build/index.js`.
 
+## Linting
+
+Oh yeah, linting is another thing you'll most likely want to do. If you're interested in that, read the next post, "[How to use ESLint with TypeScript](/blogs/typescript/eslint-for-typescript/)".
 
