@@ -367,7 +367,7 @@ That's something I've seen recently; where developers confuse a `COMMAND` from [
 
 There are some really good use cases where it makes sense to lean on some of the DDD concepts, in a front-end context.
 
-Here are a few tactics that I've had a role in the application of and that I've interacted with recently.
+Here are a few tactics that I've applied in a previous role.
 
 ### Hydrating domain models
 
