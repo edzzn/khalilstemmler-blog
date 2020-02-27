@@ -68,7 +68,7 @@ For someone to execute a [COMMAND or a QUERY](/articles/oop-design-principles/co
 
 Why can't we organize the architecture differently? Why does the _backend_ need to hold the **high-level policy**?
 
-Well, we _can_ change up that architecture for some use cases. In fact, there are several architectures that _do_ take this approach- [P2P](https://en.wikipedia.org/wiki/Peer-to-peer), for example. However, these architectures only work for **decentralized** systems that **do not** so deperately need a single source of truth in order to govern how the system works.
+Well, we _can_ change up that architecture for some use cases. In fact, there are several architectures that _do_ take this approach- [P2P](https://en.wikipedia.org/wiki/Peer-to-peer), for example. However, these architectures only work for **decentralized** systems that **do not** so desparately need a single source of truth in order to govern how the system works.
 
 To avoid going down a rabbit hole on decentralized architectures, the most common systems you'll work on are the ones where there is some sort of **centeralized policy**.
 
