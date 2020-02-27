@@ -318,7 +318,7 @@ If you want to go this route, I'd advise having a client-side library that's com
 
 You probably already knew this, but your [dtos](/articles/typescript-domain-driven-design/repository-dto-mapper/) that you pass from the backend are pretty much your client-side models.
 
-If your DTOs are just TypeScript interfaces, you can copy those in the  front-end or distribute them within your client-side library so that what you get back from an API call can be 
+If your DTOs are just TypeScript interfaces, you can copy those to the  front-end or distribute them within your client-side library.
 
 <div class="filename">user/services/userService.ts</div>
 
