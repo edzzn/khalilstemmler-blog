@@ -196,7 +196,7 @@ And if we wanted, we could turn the rule off by setting it to `0 - off`.
     "plugin:@typescript-eslint/recommended"
   ],
   "rules": { 
-    "no-console": 2 // Remember, this means error!
+    "no-console": 0 
   }
 }
 ```
