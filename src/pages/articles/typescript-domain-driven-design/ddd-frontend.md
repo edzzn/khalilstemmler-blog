@@ -230,7 +230,7 @@ Though, none of that concerns the front-end.
 <p class="caption">Choices that we make on the front-end should be mutually exclusive from our domain model.</p> 
 
 
-The majority of our front-endcode is _dumb_ to the actual problem domain. It largely entails simply **validating forms** before making API calls, **presenting data**, and responding to events like _clicks_ or _button presses_.
+The majority of our front-end code is _dumb_ to the actual problem domain. It largely entails simply **validating forms** before making API calls, **presenting data**, and responding to events like _clicks_ or _button presses_.
 
 <img class="centered-image" style="width: 75%;" src="/img/blog/ddd-frontend/frontend-subdomain.svg"/>
 
