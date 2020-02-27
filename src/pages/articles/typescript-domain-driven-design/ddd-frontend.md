@@ -111,7 +111,7 @@ Since it's very unlikely that your business will drastically change, that means 
 
 That's what makes the **domain layer** quite stable.
 
-And stable components are components that we can rely on. Therefore, it makes sense to organize the unstable (volatile) components to depend on the stable ones, but never make a stable component rely on something unstable. Like a back-end relying on a front-end. 
+And [stable components](/wiki/stable-dependency-principle/) are components that we can rely on. Therefore, it makes sense to organize the unstable (volatile) components to depend on the stable ones, but never make a stable component rely on something unstable. Like a back-end relying on a front-end. 
 
 <p class="special-quote"><b>An examplary blunder:</b> <a href="https://softwareontheroad.com/reversing-tinder-api-with-nodejs/?utm_source=reddit-webdev&utm_medium=group_post">Here's one</a>. It's titled, "Exploiting Tinder to get paid features for free". The "TL;DR? Too much on client side" - via <a href="https://www.reddit.com/r/javascript/comments/d8rbcv/exploiting_tinder_to_get_paid_features_for_free/f1ch6b7/">Reddit</a>.</p>
 
