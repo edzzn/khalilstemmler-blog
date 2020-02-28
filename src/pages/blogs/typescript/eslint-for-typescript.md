@@ -22,7 +22,7 @@ displayInArticles: false
 
 [ESLint](https://eslint.org/) is a JavaScript _linter_ that enables you to enforce a set of style, formatting, and coding standards for your codebase. It looks at your code, and tells you when you're not following the standard that you set in place.
 
-You may have also heard of [TSLint](https://palantir.github.io/tslint/), the TypeScript equivalent. In 2019, the team behind TSLint [decided that they would no longer support it](https://medium.com/palantir/tslint-in-2019-1a144c2317a9a). The reason, primarily, is because _ESLint exists_, and there was a lot of duplicate code between projects with the intended purpose.
+You may have also heard of [TSLint](https://palantir.github.io/tslint/), the TypeScript equivalent. In 2019, the team behind TSLint [decided that they would no longer support it](https://medium.com/palantir/tslint-in-2019-1a144c2317a9a). The reason, primarily, is because _ESLint exists_, and there was a lot of duplicate code between projects with the same intended purpose.
 
 That being said, there are some really awesome TSLint packages out there that, if you would like to use, you can- but just understand that they're not being supported anymore.
 
