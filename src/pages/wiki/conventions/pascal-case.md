@@ -1,5 +1,5 @@
 ---
-name: 'Camel Case'
+name: 'Pascal Case'
 templateKey: wiki
 published: true
 wikicategory: Coding Conventions
@@ -8,7 +8,7 @@ prerequisites: null
 date: '2020-03-07T00:05:26-04:00'
 updated: '2020-03-07T00:05:26-04:00'
 image: null
-plaindescription: Camel Case is a naming convention that promotes naming indentifiers using all upper-case words.
+plaindescription: Pascal Case is a naming convention that promotes naming indentifiers using all upper-case words.
 ---
 
 Pascal case (or should I say `PascalCase`) is one of three primary **capitalization conventions** (underscore, Pascal, and [camel](/wiki/conventions/camel-case/)) used in programming languages.
