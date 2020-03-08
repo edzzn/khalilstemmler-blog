@@ -340,7 +340,7 @@ Now when we run the lint command again with `npm run lint`, we can see a few err
 
 You might have noticed that at the end of the error message, it says "2 errors and 0 warnings potentially fixable with the `--fix` option."
 
-You _can_ run ESLint and tell it to fix things that it's able to fix a the same time.
+You _can_ run ESLint and tell it to fix things that it's able to fix at the same time.
 
 Using the `--fix` option, let's add a new script to our `package.json` called `lint-and-fix`.
 
