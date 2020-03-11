@@ -12,7 +12,7 @@ tags:
   - Formatting 
 category: Tooling
 published: true
-displayInArticles: false
+displayInArticles: true
 image: /img/blog/templates/banners/tooling-banner.png
 ---
 
@@ -20,7 +20,7 @@ image: /img/blog/templates/banners/tooling-banner.png
 
 ## Intro
 
-On most projects I've ever worked collaboratively on, _someone_ takes the role of the _code cleanliness champion_. It's usually the team lead, and often times, his role involves reviewing [PRs](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) and making sure love and care is put into the quality of the code.
+On most projects I've ever worked collaboratively on, _someone_ takes the role of the _code cleanliness champion_. It's usually the team lead, and often times, their role involves reviewing [PRs](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) and making sure love and care is put into the quality of the code.
 
 Quality includes both the chosen **coding conventions** in addition to the **formatting** of the code.
 
