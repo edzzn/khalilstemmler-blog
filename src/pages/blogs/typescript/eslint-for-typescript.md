@@ -381,32 +381,5 @@ console.log('Hello world!');
 
 That's really awesome. But what if we don't want to run the linter all the time to fix our code? What if there was a way that we could, while coding, have it _automatically_ format things based on our conventions?
 
-We can! With [Prettier](https://prettier.io/). More on that later.
-
-<!-- ## Installing Prettier
-
-Prettier
-
-```bash
-npm install prettier eslint-config-prettier eslint-plugin-prettier --save-dev
-```
-
-Then create a `.prettierrc.js` file.
-
-```bash
-touch .prettierrc.js
-```
-
-Here's a sample `prettier.js` config.
-
-```javascript
-module.exports =  {
-  semi:  true,
-  trailingComma: 'all',
-  singleQuote: true,
-  printWidth: 120,
-  tabWidth: 4,
-};
-``` -->
-
+We can! With [Prettier](https://prettier.io/). Read the next article, "[How to use Prettier with ESLint and TypeScript in VSCode](/blogs/tooling/prettier/)".
 

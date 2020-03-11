@@ -14,6 +14,9 @@ import graphQLBanner from '../../../../images/blogs/banners/graphql-banner.png';
 import sequelizeIcon from '../../../../images/blogs/icons/sequelize.png';
 import sequelizeBanner from '../../../../images/blogs/banners/sequelize-banner.png';
 
+import toolingIcon from '../../../../images/blogs/icons/tooling-icon.png';
+import toolingBanner from '../../../../images/blogs/banners/tooling-banner.png'
+
 export const BlogCategoryType = {
   'TypeScript': {
     icon: typeScriptIcon,
@@ -30,6 +33,10 @@ export const BlogCategoryType = {
   'GraphQL': {
     icon: graphQLIcon,
     banner: graphQLBanner
+  },
+  'Tooling': {
+    icon: toolingIcon,
+    banner: toolingBanner,
   },
   Fallback: {
     icon: mysteryIcon,
