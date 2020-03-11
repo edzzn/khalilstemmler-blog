@@ -186,6 +186,9 @@ src/index.ts 191ms
 
 And there it is!
 
+## Other considerations
+
+If you notice that linting is taking a long time, check out this package, [lint-staged](https://github.com/okonet/lint-staged). It runs the linter, but only against files that are staged (files that you're ready to push). This was suggested to me by [@glambertmtl](https://twitter.com/glambertmtl). Thank you!
 
 
 
