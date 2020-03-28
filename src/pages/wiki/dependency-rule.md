@@ -29,6 +29,10 @@ Domain Layer code can't depend on Infrastructure Layer code.
 
 But Infrastructure Layer Code _can depend_ on Domain Layer code (because it goes inwards).
 
+<div style="max-width: 300px;margin: 0 auto;">
+  <img src="/img/wiki/dependency-rule/the-dependency-rule.svg"/>
+</div>
+
 When we follow this rule, we're essentially following the [Dependency Inversion](dependency-inversion/) rule from the [SOLID Principles](/articles/solid-principles/solid-typescript/).
 
 ## Layered Architecture Dependency Rules
