@@ -10,7 +10,7 @@ prerequisites:
   - Interface
   - Abstract class
 date: '2019-07-30T00:05:26-04:00'
-updated: '2019-09-17T00:05:26-04:00'
+updated: '2020-03-28T00:05:26-04:00'
 image: /img/wiki/dependency-rule/clean-architecture-layers.svg
 plaindescription: A software architecture rule that specifies the relationship between layers, namely that an inner layer should never rely on anything from an outer layer. 
 ---
@@ -21,19 +21,21 @@ In Uncle Bob's book, he describes **the dependency rule**.
 
 That rule specifies that something declared in an outer circle <u>must not be mentioned in the code by an inner circle</u>.
 
-_In other diagrams, there are many more layers. The rule still applies._
+That means that code dependencies can only point inwards.
 
-That means that code can only point inwards.
-
-Domain Layer code can't depend on Infrastructure Layer code.
-
-But Infrastructure Layer Code _can depend_ on Domain Layer code (because it goes inwards).
+For example, Domain Layer code can't depend on Infrastructure Layer code, Infrastructure Layer Code _can depend_ on Domain Layer code (because it goes inwards).
 
 <div style="max-width: 300px;margin: 0 auto;">
   <img src="/img/wiki/dependency-rule/the-dependency-rule.svg"/>
 </div>
 
-When we follow this rule, we're essentially following the [Dependency Inversion](dependency-inversion/) rule from the [SOLID Principles](/articles/solid-principles/solid-typescript/).
+_In other diagrams, there are many more layers. The rule still applies._
+
+Why does this matter?
+- We avoid circular dependencies and keep code testable. The [Acylic Dependency Rule](/wiki/acyclic-dependencies-principle/) describes this phenomenon in more detail.
+
+How does this work?
+- By both [being conscious about how we hook up dependencies](/articles/software-design-architecture/write-testable-code/), making sure we only refer to lower layers directly, and using the [Dependency Inversion](dependency-inversion/) principle from the [SOLID Principles](/articles/solid-principles/solid-typescript/) to refer to _abstractions_ of upper layer concerns (instead of [concrete](/wiki/concrete-class/) implementations).
 
 ## Layered Architecture Dependency Rules
 
