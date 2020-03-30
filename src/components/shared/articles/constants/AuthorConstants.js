@@ -1,5 +1,5 @@
 
-import khalilImage from '../../../../images/khalil-2.jpeg'
+import khalilImage from '../../../../images/me-again-square.jpg'
 
 const authorConstants = {
   khalil: {

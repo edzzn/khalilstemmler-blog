@@ -2,7 +2,7 @@
 import React from 'react'
 import SocialLinks from './SocialLinks'
 import Currently from './Currently'
-import me from '../../../images/khalil-2.jpeg'
+import me from '../../../images/me-again-square.jpg'
 import cowboy from '../../../images/cowboy.jpg'
 import { SolidBookResourceCard } from '../../resources'
 import "../styles/Home.sass"

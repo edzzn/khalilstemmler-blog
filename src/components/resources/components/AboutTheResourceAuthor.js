@@ -1,7 +1,7 @@
 
 import React from 'react'
 import "../styles/AboutTheResourceAuthor.sass"
-import me from '../../../images/khalil-2.jpeg'
+import me from '../../../images/me-again-square.jpg'
 import authorConstants from '../../shared/articles/constants/AuthorConstants'
 
 const AboutTheResourceAuthor = ({ title }) => (
