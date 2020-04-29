@@ -38,11 +38,12 @@ But it's important to know when a component is volatile and ensure that we <u>do
 
 - ECMAScript approved language constructs: `Number.toFixed()`, `JSON.stringify()`.
 - Higher-level policies like domain-layer classes: [entities](/articles/typescript-domain-driven-design/entities/), [value objects](/articles/typescript-value-object/), [domain events](/blogs/domain-driven-design/where-do-domain-events-get-dispatched/).
+- GraphQL schemas: the client-side relies on it, and the service-side implements it.
 
 ### Examples of volatile components
 
-- Front ends. Architecturally, front-end applications are very volatile compared to backend. The styles, layout, html, css, etc are constantly being changed. Browser testing tools Cypress.io or Selenium rely on the styles and layout of the view. Because the view is so volatile, those tests constantly need to be rewritten.
-- Classes with no clear [single responsibility](/articles/solid-principles/single-responsibility/).
+- Front ends. Architecturally, front-end applications are very volatile compared to backend services. The styles, layout, html, css, etc are constantly being changed. This makes  testing on the client-side challenging and often times fruitless. When writing Cypress.io or Selenium tests, best practices dictate to refrain from writing tests that rely on the implementation details (styles, css tags, ids, pixels, etc). Instead, work to verify correctness by testing against the _behaviour_. Even with our best efforts, unless an application has completely converged, it's more likely that behaviour on the client-side will change, requiring tests to constantly need to be rewritten.
+- Classes with no clear [single responsibility](/articles/solid-principles/single-responsibility/). Change originates from the actors/roles that rely on a component. The more actors/roles that rely on a component, the more reasons it has to change. If more than one actor/role relies on a component (or we're not sure who owns it), the component is said to have _no singular responsibility_.
 
 
 ---
