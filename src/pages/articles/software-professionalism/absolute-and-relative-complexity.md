@@ -2,7 +2,7 @@
 templateKey: article
 title: "Absolute and Relative Complexity"
 date: '2020-04-29T10:04:10-05:00'
-updated: '2020-04-29T10:04:10-05:00'
+updated: '2020-05-01T10:04:10-05:00'
 description: >-
   Determining if the complexity of a problem is related to the nature of the problem or related to the way that we approach solving it.
 tags:
