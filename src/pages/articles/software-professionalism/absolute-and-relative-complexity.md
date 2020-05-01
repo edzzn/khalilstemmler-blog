@@ -199,6 +199,18 @@ Know what the rules (best practices) are _before_ you decide to break 'em.
 
 I take shortcuts all the time. But I try to always know what the implications are first.
 
+## Resources
+
+### No Silver Bullets - Accidental and Essential Complexity
+
+Shortly after this post was released to the interwebs, someone kindly pointed me to the "[No Silver Bullet – Essence and Accident in Software Engineering](https://en.wikipedia.org/wiki/No_Silver_Bullet)" Wikipedia page. Funny. The fact that I had arrived at this terminology myself, yet it seems like it was already well-researched and discussed, reinforces the following statement:
+
+> "Not a lot has changed about the fundamentals of software design over the past 20 years, but there's a huge lack of training on it" - me, via [solidbook.io](https://solidbook.io)
+
+If you're interested in learning more about this subject, I suggest checking out this paper called "[Out of the Tar Pit](http://curtclifton.net/papers/MoseleyMarks06a.pdf?fbclid=IwAR0hFwqsdQxwSyv8ayiQsOjET3aYQDm33dMeSXgcZHfDmqI4Cfmwo4hAKfc)" by Ben Moseley.
+
+It builds on top of the classic paper about software complexity originally discussed by Fred Brooks in 1986. It's very well put together and worth your time. Consider reading the first half at least.
+
 ## Conclusion
 
 In summary, ask yourself if the problem is hard because it's a _hard_ problem, or if you're _making_ it hard by not following best practices.
