@@ -203,7 +203,7 @@ I take shortcuts all the time. But I try to always know what the implications ar
 
 ### No Silver Bullets - Accidental and Essential Complexity
 
-Shortly after this post was released to the interwebs, someone kindly pointed me to the "[No Silver Bullet – Essence and Accident in Software Engineering](https://en.wikipedia.org/wiki/No_Silver_Bullet)" Wikipedia page. Funny. The fact that I had arrived at this terminology myself, yet it seems like it was already well-researched and discussed, reinforces the following statement:
+Shortly after this post was released to the interwebs, someone kindly pointed me to the "[No Silver Bullet – Essence and Accident in Software Engineering](https://en.wikipedia.org/wiki/No_Silver_Bullet)" Wikipedia page. Funny. The fact that I had arrived at the concept of _absolute_ and _relative_ complexity myself, yet was already well-researched and discussed as _essential_ and _accidental_ complexity, reinforces the following statement:
 
 > "Not a lot has changed about the fundamentals of software design over the past 20 years, but there's a huge lack of training on it" - me, via [solidbook.io](https://solidbook.io)
 
