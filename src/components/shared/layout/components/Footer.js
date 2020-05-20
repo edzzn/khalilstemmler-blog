@@ -44,9 +44,11 @@ const Menu = () => {
           { name: 'About', url: '/about' },
           { name: 'Articles', url: '/articles' },
           { name: 'Blog', url: '/blog' },
+          { name: 'Courses', url: '/courses' },
+          { name: 'Books', url: '/books' },
+          { name: 'Newsletter', url: '/newsletter' },
           { name: 'Portfolio', url: '/portfolio' },
           { name: 'Wiki', url: '/wiki' }
-          // TODO: Put the rest of the navigation links here
         ]}
       />
       <MenuList
@@ -96,22 +98,22 @@ const Menu = () => {
 
 const FooterBanner = () => {
   const currentYear = new Date().getFullYear()
-  
+
   return (
-    <div className="footer--banner flex align-center justify-center wrap">© khalilstemmler • {currentYear} • Built with 
-      <img src={GatsbyLogo}/> • Open sourced on 
-      <img src={GithubLogo}/> • Deployed on 
-      <img src={NetlifyLogo}/></div>
+    <div className="footer--banner flex align-center justify-center wrap">© khalilstemmler • {currentYear} • Built with
+      <img src={GatsbyLogo} /> • Open sourced on
+      <img src={GithubLogo} /> • Deployed on
+      <img src={NetlifyLogo} /></div>
   )
 }
 
 const Footer = () => (
   <>
     <footer className="footer">
-      <div className="footer--description">{ prose.main.description }</div>
-      <Menu/>
+      <div className="footer--description">{prose.main.description}</div>
+      <Menu />
     </footer>
-    <FooterBanner/>
+    <FooterBanner />
   </>
 )
 
